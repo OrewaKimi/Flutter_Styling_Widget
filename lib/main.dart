@@ -22,10 +22,29 @@ class MyApp extends StatelessWidget {
           child: Card(
             elevation: 4,
             margin: const EdgeInsets.all(16),
-            child: ListTile(
-              leading: const Icon(Icons.account_circle, size: 50),
-              title: const Text('Kimi Maulana'),
-              subtitle: const Text('Software Engineer'),
+            child: Column(
+              children: [
+                ListTile(
+                  leading: const Icon(Icons.account_circle, size: 50),
+                  title: const Text('Kimi Maulana'),
+                  subtitle: const Text('Software Engineer'),
+                ),
+                const SizedBox(height: 16),
+                // acction when button pressed
+                ElevatedButton(
+                  onPressed: () {
+                    print('Lihat Profil');
+                  },
+                  child: const Text('Lihat Profil'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.tealAccent,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 32,
+                      vertical: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
