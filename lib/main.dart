@@ -7,46 +7,41 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Card Widget Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Card Widget'),
-          backgroundColor: Colors.tealAccent,
+      title: 'Flutter Theme Demo',
+      theme: ThemeData(
+        brightness: Brightness.dark, // change color become dark mode
+        primarySwatch: Colors.deepPurple,
+        appBarTheme: AppBarTheme( 
+          backgroundColor: Colors.deepPurpleAccent,
+          titleTextStyle: TextStyle(color: Colors.white),
         ),
-        body: Center(
-          child: Card(
-            elevation: 4,
-            margin: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                ListTile(
-                  leading: const Icon(Icons.account_circle, size: 50),
-                  title: const Text('Kimi Maulana'),
-                  subtitle: const Text('Software Engineer'),
-                ),
-                const SizedBox(height: 16),
-                // acction when button pressed
-                ElevatedButton(
-                  onPressed: () {
-                    print('Lihat Profil');
-                  },
-                  child: const Text('Lihat Profil'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.tealAccent,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 32,
-                      vertical: 16,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(
+            fontSize: 20,
+            color: Colors.white, 
           ),
+        ),
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home With Theme')),
+      body: Center(
+        child: Text(
+          'Ini teks dengan tema!',
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
       ),
     );
