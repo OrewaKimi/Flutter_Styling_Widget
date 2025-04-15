@@ -34,6 +34,15 @@ class MyApp extends StatelessWidget {
                   fontSize: 24,
                 ),
               ),
+              Positioned(
+              bottom: 0,
+              right: 0,
+              child: Icon(
+                Icons.favorite,
+                color: Colors.red,
+                size: 24,
+              ),
+              ),
             ],
           ),
         ),
