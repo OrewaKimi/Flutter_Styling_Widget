@@ -12,38 +12,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Stack Widget Demo',
+      title: 'Card Widget Demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Stack Widget'),
-          backgroundColor: Colors.greenAccent,
+          title: const Text('Card Widget'),
+          backgroundColor: Colors.tealAccent,
         ),
         body: Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.green,
-              ),
-              const Text(
-                'Stack Widget',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-              Positioned(
-              bottom: 0,
-              right: 0,
-              child: Icon(
-                Icons.favorite,
-                color: Colors.red,
-                size: 24,
-              ),
-              ),
-            ],
+          child: Card(
+            elevation: 4,
+            margin: const EdgeInsets.all(16),
+            child: ListTile(
+              leading: const Icon(Icons.account_circle, size: 50),
+              title: const Text('John Doe'),
+              subtitle: const Text('Software Engineer'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+            ),
           ),
         ),
       ),
