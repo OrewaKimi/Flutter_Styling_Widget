@@ -24,9 +24,8 @@ class MyApp extends StatelessWidget {
             margin: const EdgeInsets.all(16),
             child: ListTile(
               leading: const Icon(Icons.account_circle, size: 50),
-              title: const Text('John Doe'),
+              title: const Text('Kimi Maulana'),
               subtitle: const Text('Software Engineer'),
-              trailing: const Icon(Icons.arrow_forward_ios),
             ),
           ),
         ),
