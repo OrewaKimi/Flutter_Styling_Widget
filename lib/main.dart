@@ -12,20 +12,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Styling Text App',
+      title: 'Container Decoration Demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Styling'),
+          title: const Text('Container & Decoration'),
+          backgroundColor: Colors.blue,
         ),
-        body: const Center(
-          child: Text(
-            'Hello, Kimi Maulana!',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.red,
-              fontStyle: FontStyle.italic,
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: const [BoxShadow(color: Colors.grey, blurRadius: 5)],
             ),
+            child: const Text('Ini Container dengan Decoration'),
           ),
         ),
       ),
