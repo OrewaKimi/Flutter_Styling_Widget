@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
             margin: const EdgeInsets.all(20),
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: const [BoxShadow(color: Colors.grey, blurRadius: 5)],
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: const [BoxShadow(color: Colors.grey, 
+              blurRadius: 5)],
             ),
             child: const Text('Ini Container dengan Decoration'),
           ),
